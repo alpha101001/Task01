@@ -5,12 +5,12 @@ const App = ()=> {
   return (
       <Box
           sx={{
-              backgroundColor: "black", // Replace with your desired color
-              minHeight: "100vh", // Ensures the background covers the full height
+              backgroundColor: "black",
+              minHeight: "100vh",
               display: "flex",
-              // alignItems: "center",
-              justifyContent: "center", // Optional: Center your content
-              padding: "2rem", // Optional: Add some padding
+
+              justifyContent: "center",
+              padding: "2rem",
           }}
       >
           <CssBaseline />

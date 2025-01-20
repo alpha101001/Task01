@@ -1,10 +1,10 @@
-import {useEffect, useLayoutEffect, useState} from "react";
+import {useEffect, useState} from "react";
 import {Form, Select, Button, Row, Col} from "antd";
 import {
     Table,
     TableBody,
     TableCell,
-    TableContainer, TableFooter,
+    TableContainer,
     TableHead,
     TableRow
 } from "@mui/material";
@@ -160,7 +160,7 @@ export const CustomForm = () => {
 
     };
     const onFinish = async (values) => {
-        console.log("Submitted =>", values);
+        // console.log("Submitted =>", values);
         const payload = {
             topDivision: values.division,
             topDistrict: values.district,
@@ -183,7 +183,7 @@ export const CustomForm = () => {
             }
 
             const data = await response.json();
-            console.log("POST Success:", data);
+            // console.log("POST Success:", data);
         } catch (err) {
             console.error("POST Error:", err);
         }
@@ -295,7 +295,7 @@ export const CustomForm = () => {
                                 <Form.List name="districtWithDivisions">
                                     {(fields, {add, remove}) => (
                                         <>
-                                            {console.log(fields,'fields')}
+
                                             {fields.map((field, index) => (
 
                                                 <TableRow key={field.key} sx={{backgroundColor: "#1c1b15",height:"12vh"}}>
