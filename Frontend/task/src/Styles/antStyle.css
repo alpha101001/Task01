@@ -1,0 +1,18 @@
+.custom-select .ant-select-selector {
+    background-color: black !important;
+    color: #f1c907 !important;
+    font-weight: bold !important;
+    border: 1px solid rgba(238, 94, 5, 0.45) !important;
+    font-size: 1.2rem;
+}
+
+.custom-select .ant-select-arrow {
+    color: yellow !important; /* Styles the dropdown arrow */
+}
+
+/* Style the label inside Form.Item */
+.custom-form-item .ant-form-item-label > label {
+    color: #25e70f !important; /* Change label color */
+    font-weight: bold;      /* Optional: Make it bold */
+    font-size: 1.2rem;        /* Optional: Adjust font size */
+}
