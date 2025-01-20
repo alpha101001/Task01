@@ -1,28 +1,16 @@
-import express from 'express';
-import bodyParser from 'body-parser';
-import cors from 'cors';
-import dotenv from 'dotenv';
-import './api/Config/db.js';
-
+const express = require("express");
+const elementRoutes = require("./api/Routes/elementRoutes.js");
+require("dotenv").config();
+const cors = require("cors");
 const app = express();
-dotenv.config();
-const PORT = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
-app.use(bodyParser.json());
-app.use(cors(
-    {
-        origin: '*',
-        methods: ['GET', 'POST', 'PUT', 'DELETE'],
-        credentials: true,
-    }
-));
-app.get('/', (req, res) => {
-    res.send('Hello');
+// Parse JSON body
+app.use(express.json());
+app.use(cors());
+// Routes
+app.use("/", elementRoutes);
+
+app.listen(port, () => {
+    console.log(`Server running at http://localhost:${port}`);
 });
-
-
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
-
-export default app;
